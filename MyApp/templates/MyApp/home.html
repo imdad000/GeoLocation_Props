@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Excel file upload and processing : And getting Excel File with Address  
+        </title>
+         <meta http-equiv="refresh" content="300">
+    </head>
+    <body style="margin-top: 30px;margin-left: 30px;text-align: center;
+    background-color: #2d5669;">
+    <h1 style="color: #b7dfff;font-size: 50px;margin-bottom: 80px;">Location Finder</h1>
+        <form action="{% url 'myapp:index' %}" method="post" enctype="multipart/form-data" style="color: #cec9c9;">
+            {% csrf_token %}
+            <input type="file"
+                   title="Upload excel file"
+                   name="excel_file"
+                   style="border: 1px solid black; padding: 5px; background-color: #ffffff80; color: black;"
+                   required="required">
+            <p>
+            <input type="submit"
+                   value="Upload"
+                   style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">
+        </form>
+
+        <p></p>
+        <hr>
+        {% if excel_data %}
+      
+         <div class="columns download">
+                  <p>
+
+                     <a href="xlwt example.xls" class="button"  download="Compelete details"><i class="fa fa-download"></i>Download File</a>
+                    
+                    
+                  </p>
+        </div>
+        {% endif %}
+        
+    </body>
+</html>
