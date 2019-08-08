@@ -1,4 +1,4 @@
 # GeoLocation_Props
-## Upload Only Excel files
+## Upload Only Excel Sheet
 
 Run Python manage.py runserver
